@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuleiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="tabuleiro">
+        <div class="container">
+            <div class="bloco" id="op1" onclick="Mostrar(1)"></div>
+            <div class="bloco" id="op2" onclick="Mostrar(2)"></div>
+            <div class="bloco" id="op3" onclick="Mostrar(3)"></div>
+        </div>
+        <div class="container">
+            <div class="bloco" id="op4" onclick="Mostrar(4)"></div>
+            <div class="bloco" id="op5" onclick="Mostrar(5)"></div>
+            <div class="bloco" id="op6" onclick="Mostrar(6)"></div>
+        </div>
+        <div class="container">
+            <div class="bloco" id="op7" onclick="Mostrar(7)"></div>
+            <div class="bloco" id="op8" onclick="Mostrar(8)"></div>
+            <div class="bloco" id="op9" onclick="Mostrar(9)"></div>
+        </div>
+
+    </div>
+    <script>
+        cliques = 0
+        var elm = document.getElementsByClassName('bloco')
+        function Mostrar(qual){
+            cliques = cliques + 1
+            if(elm[qual -1].innerHTML == ""){
+                if(cliques == 1){
+                    elm[qual -1].innerHTML = "X"
+                }
+                else if(cliques == 2){
+                    elm[qual -1].innerHTML="O"
+                    cliques = 0
+                }
+            }
+
+
+
+
+        }
+    </script>
+</body>
+</html>
